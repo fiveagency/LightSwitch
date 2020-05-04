@@ -48,7 +48,6 @@
 				E0CBF5C1D8FF36264619CE02 /* Pods-LightSwitch.debug.xcconfig */,
 				D88E1F4A9C980F0C61835130 /* Pods-LightSwitch.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,23 @@
 		B45265B52460B6CE00E2258C /* LightSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				B45265D82460C14100E2258C /* Supplementary */,
+				B45265C42460B6D200E2258C /* Info.plist */,
+			);
+			path = LightSwitch;
+			sourceTree = "<group>";
+		};
+		B45265D82460C14100E2258C /* Supplementary */ = {
+			isa = PBXGroup;
+			children = (
 				B45265B62460B6CE00E2258C /* AppDelegate.swift */,
 				B45265B82460B6CE00E2258C /* SceneDelegate.swift */,
 				B45265BA2460B6CE00E2258C /* ViewController.swift */,
 				B45265BC2460B6CE00E2258C /* Main.storyboard */,
-				B45265BF2460B6D200E2258C /* Assets.xcassets */,
 				B45265C12460B6D200E2258C /* LaunchScreen.storyboard */,
-				B45265C42460B6D200E2258C /* Info.plist */,
+				B45265BF2460B6D200E2258C /* Assets.xcassets */,
 			);
-			path = LightSwitch;
+			path = Supplementary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
