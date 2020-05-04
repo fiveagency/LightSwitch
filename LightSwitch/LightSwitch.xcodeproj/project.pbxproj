@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		B45265BE2460B6CE00E2258C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45265BC2460B6CE00E2258C /* Main.storyboard */; };
 		B45265C02460B6D200E2258C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45265BF2460B6D200E2258C /* Assets.xcassets */; };
 		B45265C32460B6D200E2258C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45265C12460B6D200E2258C /* LaunchScreen.storyboard */; };
+		B45265DA2460C2F200E2258C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265D92460C2F200E2258C /* AppColors.swift */; };
+		B45265DC2460C30800E2258C /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265DB2460C30800E2258C /* AppImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B45265BF2460B6D200E2258C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B45265C22460B6D200E2258C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B45265C42460B6D200E2258C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B45265D92460C2F200E2258C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		B45265DB2460C30800E2258C /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		D88E1F4A9C980F0C61835130 /* Pods-LightSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitch.release.xcconfig"; path = "Target Support Files/Pods-LightSwitch/Pods-LightSwitch.release.xcconfig"; sourceTree = "<group>"; };
 		E0CBF5C1D8FF36264619CE02 /* Pods-LightSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitch.debug.xcconfig"; path = "Target Support Files/Pods-LightSwitch/Pods-LightSwitch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +99,8 @@
 				B45265BC2460B6CE00E2258C /* Main.storyboard */,
 				B45265C12460B6D200E2258C /* LaunchScreen.storyboard */,
 				B45265BF2460B6D200E2258C /* Assets.xcassets */,
+				B45265D92460C2F200E2258C /* AppColors.swift */,
+				B45265DB2460C30800E2258C /* AppImages.swift */,
 			);
 			path = Supplementary;
 			sourceTree = "<group>";
@@ -215,7 +221,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B45265BB2460B6CE00E2258C /* ViewController.swift in Sources */,
+				B45265DA2460C2F200E2258C /* AppColors.swift in Sources */,
 				B45265B72460B6CE00E2258C /* AppDelegate.swift in Sources */,
+				B45265DC2460C30800E2258C /* AppImages.swift in Sources */,
 				B45265B92460B6CE00E2258C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
