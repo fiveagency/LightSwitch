@@ -1,23 +1,17 @@
-//
-//  SceneDelegate.swift
-//  LightSwitch
-//
-//  Created by Kristijan Vidovic on 04/05/2020.
-//  Copyright © 2020 Kristijan Vidovic. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = getMainController()
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -48,6 +42,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    private func getMainController() -> MainViewController {
+        let repository = LightsRepository()
+        let useCase = LightsUseCase(lightsRepository: repository)
+        let presenter = MainViewPresenter(lightsUseCase: useCase)
+        let controller = MainViewController(mainViewPresenter: presenter)
+
+        return controller
+    }
 
 }
 

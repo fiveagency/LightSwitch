@@ -16,6 +16,22 @@
 		B45265C32460B6D200E2258C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45265C12460B6D200E2258C /* LaunchScreen.storyboard */; };
 		B45265DA2460C2F200E2258C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265D92460C2F200E2258C /* AppColors.swift */; };
 		B45265DC2460C30800E2258C /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265DB2460C30800E2258C /* AppImages.swift */; };
+		B45265E12460C3EE00E2258C /* LightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265E02460C3EE00E2258C /* LightCell.swift */; };
+		B45265E32460C40700E2258C /* LightCell+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265E22460C40700E2258C /* LightCell+Design.swift */; };
+		B45265E52460C46A00E2258C /* SectionOfLightViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265E42460C46A00E2258C /* SectionOfLightViewModels.swift */; };
+		B45265E82460C49A00E2258C /* LightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265E72460C49A00E2258C /* LightViewModel.swift */; };
+		B45265EE2460C4E700E2258C /* LightWithState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265ED2460C4E700E2258C /* LightWithState.swift */; };
+		B45265F02460C4F800E2258C /* LightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265EF2460C4F800E2258C /* LightModel.swift */; };
+		B45265F22460C51900E2258C /* LightStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265F12460C51900E2258C /* LightStateModel.swift */; };
+		B45265F42460C53D00E2258C /* LightStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265F32460C53D00E2258C /* LightStateType.swift */; };
+		B45265F62460C59400E2258C /* LightsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265F52460C59400E2258C /* LightsUseCaseProtocol.swift */; };
+		B45265F82460C5AA00E2258C /* LightsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265F72460C5AA00E2258C /* LightsUseCase.swift */; };
+		B45265FA2460C5CB00E2258C /* LightsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265F92460C5CB00E2258C /* LightsRepositoryProtocol.swift */; };
+		B45265FC2460C5F100E2258C /* LightsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265FB2460C5F100E2258C /* LightsRepository.swift */; };
+		B45265FE2460C60F00E2258C /* LightsRepositoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265FD2460C60F00E2258C /* LightsRepositoryData.swift */; };
+		B45266002460C6A700E2258C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265FF2460C6A700E2258C /* MainViewController.swift */; };
+		B45266022460C6D500E2258C /* MainViewController+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45266012460C6D500E2258C /* MainViewController+Design.swift */; };
+		B45266042460C6E900E2258C /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45266032460C6E900E2258C /* MainViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +46,22 @@
 		B45265C42460B6D200E2258C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B45265D92460C2F200E2258C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		B45265DB2460C30800E2258C /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
+		B45265E02460C3EE00E2258C /* LightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCell.swift; sourceTree = "<group>"; };
+		B45265E22460C40700E2258C /* LightCell+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightCell+Design.swift"; sourceTree = "<group>"; };
+		B45265E42460C46A00E2258C /* SectionOfLightViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfLightViewModels.swift; sourceTree = "<group>"; };
+		B45265E72460C49A00E2258C /* LightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewModel.swift; sourceTree = "<group>"; };
+		B45265ED2460C4E700E2258C /* LightWithState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightWithState.swift; sourceTree = "<group>"; };
+		B45265EF2460C4F800E2258C /* LightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightModel.swift; sourceTree = "<group>"; };
+		B45265F12460C51900E2258C /* LightStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightStateModel.swift; sourceTree = "<group>"; };
+		B45265F32460C53D00E2258C /* LightStateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightStateType.swift; sourceTree = "<group>"; };
+		B45265F52460C59400E2258C /* LightsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsUseCaseProtocol.swift; sourceTree = "<group>"; };
+		B45265F72460C5AA00E2258C /* LightsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsUseCase.swift; sourceTree = "<group>"; };
+		B45265F92460C5CB00E2258C /* LightsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		B45265FB2460C5F100E2258C /* LightsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsRepository.swift; sourceTree = "<group>"; };
+		B45265FD2460C60F00E2258C /* LightsRepositoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsRepositoryData.swift; sourceTree = "<group>"; };
+		B45265FF2460C6A700E2258C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B45266012460C6D500E2258C /* MainViewController+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Design.swift"; sourceTree = "<group>"; };
+		B45266032460C6E900E2258C /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		D88E1F4A9C980F0C61835130 /* Pods-LightSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitch.release.xcconfig"; path = "Target Support Files/Pods-LightSwitch/Pods-LightSwitch.release.xcconfig"; sourceTree = "<group>"; };
 		E0CBF5C1D8FF36264619CE02 /* Pods-LightSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitch.debug.xcconfig"; path = "Target Support Files/Pods-LightSwitch/Pods-LightSwitch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				B45265D82460C14100E2258C /* Supplementary */,
+				B45265DD2460C39A00E2258C /* Lights */,
 				B45265C42460B6D200E2258C /* Info.plist */,
 			);
 			path = LightSwitch;
@@ -103,6 +136,85 @@
 				B45265DB2460C30800E2258C /* AppImages.swift */,
 			);
 			path = Supplementary;
+			sourceTree = "<group>";
+		};
+		B45265DD2460C39A00E2258C /* Lights */ = {
+			isa = PBXGroup;
+			children = (
+				B45265E92460C4AE00E2258C /* Data */,
+				B45265DE2460C3CC00E2258C /* UI */,
+			);
+			path = Lights;
+			sourceTree = "<group>";
+		};
+		B45265DE2460C3CC00E2258C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B45265E62460C48300E2258C /* ViewModels */,
+				B45265DF2460C3DA00E2258C /* LightCell */,
+				B45265FF2460C6A700E2258C /* MainViewController.swift */,
+				B45266012460C6D500E2258C /* MainViewController+Design.swift */,
+				B45266032460C6E900E2258C /* MainViewPresenter.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B45265DF2460C3DA00E2258C /* LightCell */ = {
+			isa = PBXGroup;
+			children = (
+				B45265E02460C3EE00E2258C /* LightCell.swift */,
+				B45265E22460C40700E2258C /* LightCell+Design.swift */,
+				B45265E42460C46A00E2258C /* SectionOfLightViewModels.swift */,
+			);
+			path = LightCell;
+			sourceTree = "<group>";
+		};
+		B45265E62460C48300E2258C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B45265E72460C49A00E2258C /* LightViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B45265E92460C4AE00E2258C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B45265EC2460C4D200E2258C /* Models */,
+				B45265EB2460C4CC00E2258C /* UseCases */,
+				B45265EA2460C4C400E2258C /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B45265EA2460C4C400E2258C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B45265F92460C5CB00E2258C /* LightsRepositoryProtocol.swift */,
+				B45265FB2460C5F100E2258C /* LightsRepository.swift */,
+				B45265FD2460C60F00E2258C /* LightsRepositoryData.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B45265EB2460C4CC00E2258C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B45265F52460C59400E2258C /* LightsUseCaseProtocol.swift */,
+				B45265F72460C5AA00E2258C /* LightsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B45265EC2460C4D200E2258C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B45265ED2460C4E700E2258C /* LightWithState.swift */,
+				B45265EF2460C4F800E2258C /* LightModel.swift */,
+				B45265F12460C51900E2258C /* LightStateModel.swift */,
+				B45265F32460C53D00E2258C /* LightStateType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +332,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45265E32460C40700E2258C /* LightCell+Design.swift in Sources */,
+				B45265F82460C5AA00E2258C /* LightsUseCase.swift in Sources */,
+				B45266042460C6E900E2258C /* MainViewPresenter.swift in Sources */,
 				B45265BB2460B6CE00E2258C /* ViewController.swift in Sources */,
+				B45265FC2460C5F100E2258C /* LightsRepository.swift in Sources */,
+				B45265F22460C51900E2258C /* LightStateModel.swift in Sources */,
+				B45266002460C6A700E2258C /* MainViewController.swift in Sources */,
+				B45265E82460C49A00E2258C /* LightViewModel.swift in Sources */,
+				B45265F62460C59400E2258C /* LightsUseCaseProtocol.swift in Sources */,
+				B45265FA2460C5CB00E2258C /* LightsRepositoryProtocol.swift in Sources */,
+				B45265E52460C46A00E2258C /* SectionOfLightViewModels.swift in Sources */,
+				B45265EE2460C4E700E2258C /* LightWithState.swift in Sources */,
+				B45266022460C6D500E2258C /* MainViewController+Design.swift in Sources */,
 				B45265DA2460C2F200E2258C /* AppColors.swift in Sources */,
+				B45265E12460C3EE00E2258C /* LightCell.swift in Sources */,
+				B45265F02460C4F800E2258C /* LightModel.swift in Sources */,
+				B45265F42460C53D00E2258C /* LightStateType.swift in Sources */,
+				B45265FE2460C60F00E2258C /* LightsRepositoryData.swift in Sources */,
 				B45265B72460B6CE00E2258C /* AppDelegate.swift in Sources */,
 				B45265DC2460C30800E2258C /* AppImages.swift in Sources */,
 				B45265B92460B6CE00E2258C /* SceneDelegate.swift in Sources */,
