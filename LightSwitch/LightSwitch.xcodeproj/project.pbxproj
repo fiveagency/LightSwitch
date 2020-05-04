@@ -110,6 +110,7 @@
 				B45265AF2460B6CE00E2258C /* Sources */,
 				B45265B02460B6CE00E2258C /* Frameworks */,
 				B45265B12460B6CE00E2258C /* Resources */,
+				23ECB801F35ED99FEA64CEE5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +168,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		23ECB801F35ED99FEA64CEE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightSwitch/Pods-LightSwitch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightSwitch/Pods-LightSwitch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LightSwitch/Pods-LightSwitch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		61571DAC47D9DB70269B6162 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
