@@ -1,9 +1,13 @@
-//
-//  AppImages.swift
-//  LightSwitch
-//
-//  Created by Kristijan Vidovic on 04/05/2020.
-//  Copyright © 2020 Kristijan Vidovic. All rights reserved.
-//
+import UIKit
 
-import Foundation
+extension UIImage {
+
+    static var lightBulbOn: UIImage {
+        return UIImage(named: "lightBulb_On")!
+    }
+
+    static var lightBulbOff: UIImage {
+        return UIImage(named: "lightBulb_Off")!
+    }
+
+}

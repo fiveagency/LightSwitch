@@ -1,9 +1,17 @@
-//
-//  AppColors.swift
-//  LightSwitch
-//
-//  Created by Kristijan Vidovic on 04/05/2020.
-//  Copyright © 2020 Kristijan Vidovic. All rights reserved.
-//
+import UIKit
 
-import Foundation
+extension UIColor {
+
+    static var mainBackgroundColor: UIColor {
+        return UIColor(named: "backgroundColor")!
+    }
+
+    static var cellGradientStart: UIColor {
+        return UIColor(named: "WinterNeva_Start")!
+    }
+
+    static var cellGradientEnd: UIColor {
+        return UIColor(named: "WinterNeva_End")!
+    }
+
+}
