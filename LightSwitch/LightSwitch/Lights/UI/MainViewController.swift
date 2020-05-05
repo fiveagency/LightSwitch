@@ -41,20 +41,19 @@ class MainViewController: UIViewController {
 
                 return cell
         })
-
-        tableView
-            .rx
-            .modelSelected(LightViewModel.self)
-            .subscribe(onNext: { [weak self] model in
-                self?.presenter.toggleLight(withId: model.id)
-            })
-            .disposed(by: disposeBag)
     }
 
     private func bindPresenter() {
         presenter
             .lightData
             .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        tableView
+            .rx
+            .modelSelected(LightViewModel.self)
+            .map { [weak self] in self?.presenter.toggleLight(withId: $0.id) }
+            .subscribe()
             .disposed(by: disposeBag)
     }
 

@@ -3,7 +3,6 @@ import RxSwift
 class MainViewPresenter {
 
     private var lightsUseCase: LightsUseCaseProtocol!
-    private var disposeBag: DisposeBag!
 
     var lightData: Observable<[SectionOfLightViewModels]> {
         return lightsUseCase
@@ -23,14 +22,10 @@ class MainViewPresenter {
 
     init(lightsUseCase: LightsUseCaseProtocol) {
         self.lightsUseCase = lightsUseCase
-        self.disposeBag = DisposeBag()
     }
 
-    func toggleLight(withId id: Int) {
-        lightsUseCase
-            .toggleLight(withId: id)
-            .subscribe()
-            .disposed(by: disposeBag)
+    func toggleLight(withId id: Int) -> Completable {
+        return lightsUseCase.toggleLight(withId: id)
     }
 
 }

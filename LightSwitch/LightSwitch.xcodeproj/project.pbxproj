@@ -10,7 +10,6 @@
 		19B024F0ABE8A7BB2B228A9B /* Pods_LightSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920BEE74D07D12B3A50FE00E /* Pods_LightSwitch.framework */; };
 		B45265B72460B6CE00E2258C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265B62460B6CE00E2258C /* AppDelegate.swift */; };
 		B45265B92460B6CE00E2258C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265B82460B6CE00E2258C /* SceneDelegate.swift */; };
-		B45265BB2460B6CE00E2258C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265BA2460B6CE00E2258C /* ViewController.swift */; };
 		B45265BE2460B6CE00E2258C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45265BC2460B6CE00E2258C /* Main.storyboard */; };
 		B45265C02460B6D200E2258C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45265BF2460B6D200E2258C /* Assets.xcassets */; };
 		B45265C32460B6D200E2258C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45265C12460B6D200E2258C /* LaunchScreen.storyboard */; };
@@ -39,7 +38,6 @@
 		B45265B32460B6CE00E2258C /* LightSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45265B62460B6CE00E2258C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B45265B82460B6CE00E2258C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B45265BA2460B6CE00E2258C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B45265BD2460B6CE00E2258C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B45265BF2460B6D200E2258C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B45265C22460B6D200E2258C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 			children = (
 				B45265B62460B6CE00E2258C /* AppDelegate.swift */,
 				B45265B82460B6CE00E2258C /* SceneDelegate.swift */,
-				B45265BA2460B6CE00E2258C /* ViewController.swift */,
 				B45265BC2460B6CE00E2258C /* Main.storyboard */,
 				B45265C12460B6D200E2258C /* LaunchScreen.storyboard */,
 				B45265BF2460B6D200E2258C /* Assets.xcassets */,
@@ -335,7 +332,6 @@
 				B45265E32460C40700E2258C /* LightCell+Design.swift in Sources */,
 				B45265F82460C5AA00E2258C /* LightsUseCase.swift in Sources */,
 				B45266042460C6E900E2258C /* MainViewPresenter.swift in Sources */,
-				B45265BB2460B6CE00E2258C /* ViewController.swift in Sources */,
 				B45265FC2460C5F100E2258C /* LightsRepository.swift in Sources */,
 				B45265F22460C51900E2258C /* LightStateModel.swift in Sources */,
 				B45266002460C6A700E2258C /* MainViewController.swift in Sources */,

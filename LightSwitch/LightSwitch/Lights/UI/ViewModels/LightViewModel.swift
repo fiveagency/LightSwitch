@@ -7,7 +7,7 @@ struct LightViewModel: Equatable {
     init(from lightWithState: LightWithState) {
         self.id = lightWithState.light.id
         self.name = lightWithState.light.name
-        self.isOn = lightWithState.lightState.state == .on ? true : false
+        self.isOn = lightWithState.lightState.state == .on
     }
 
 }
