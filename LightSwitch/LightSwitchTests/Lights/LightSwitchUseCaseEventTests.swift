@@ -1,10 +1,11 @@
-import XCTest
+import Quick
+import Nimble
+import RxNimble
 import RxSwift
 import RxTest
-import RxCocoa
 @testable import LightSwitch
 
-class LightsUseCaseEventTests: XCTestCase {
+class LightSwitchUseCaseEventTests: QuickSpec {
 
     private var lightsUseCase: LightsUseCaseProtocol!
     private var lightsRepository: LightsRepositoryProtocolMock!
@@ -13,76 +14,77 @@ class LightsUseCaseEventTests: XCTestCase {
     private var scheduler: TestScheduler!
     private var disposeBag: DisposeBag!
 
-    override func setUpWithError() throws {
-        try super.setUpWithError()
-        lightsRepository = LightsRepositoryProtocolMock()
-        lightsUseCase = LightsUseCase(lightsRepository: lightsRepository)
-        lightModelSubject = PublishSubject<[LightModel]>()
-        lightStateModelSubject = PublishSubject<[LightStateModel]>()
-        scheduler = TestScheduler(initialClock: 0)
-        disposeBag = DisposeBag()
-    }
+    override func spec() {
 
-    override func tearDownWithError() throws {
-        try super.tearDownWithError()
-    }
+        beforeEach {
+            self.lightsRepository = LightsRepositoryProtocolMock()
+            self.lightsUseCase = LightsUseCase(lightsRepository: self.lightsRepository)
+            self.lightModelSubject = PublishSubject<[LightModel]>()
+            self.lightStateModelSubject = PublishSubject<[LightStateModel]>()
+            self.scheduler = TestScheduler(initialClock: 0)
+            self.disposeBag = DisposeBag()
+        }
 
-    // queryLightsWithState should return same result regardless of order of model and state events
-    func testQueryLightsWithState_When_Model_Before_State() throws {
-        lightsRepository.queryAllLightsReturnValue = lightModelSubject
-        lightsRepository.queryAllLightStatesReturnValue = lightStateModelSubject
+        describe("queryLightsWithState") {
 
-        let lightModels = [LightModel].stub(withCount: 3)
-        let lightStateModels = [LightStateModel].stub(withCount: 3)
+            it("will have expected result if models arrive before states") {
+                self.lightsRepository.queryAllLightsReturnValue = self.lightModelSubject
+                self.lightsRepository.queryAllLightStatesReturnValue = self.lightStateModelSubject
 
-        let numberOfLightsWithStates = self.lightsUseCase
-            .queryLightsWithState()
-            .map { $0.count }
+                let lightModels = [LightModel].stub(withCount: 3)
+                let lightStateModels = [LightStateModel].stub(withCount: 3)
 
-        scheduler
-            .createColdObservable([.next(10, lightModels)])
-            .bind(to: lightModelSubject)
-            .disposed(by: disposeBag)
+                let numberOfLightsWithStates = self.lightsUseCase
+                    .queryLightsWithState()
+                    .map { $0.count }
 
-        scheduler
-            .createColdObservable([.next(20, lightStateModels)])
-            .bind(to: lightStateModelSubject)
-            .disposed(by: disposeBag)
+                self.scheduler
+                    .createColdObservable([.next(10, lightModels)])
+                    .bind(to: self.lightModelSubject)
+                    .disposed(by: self.disposeBag)
 
-        let result = scheduler.record(numberOfLightsWithStates, disposeBag: self.disposeBag)
+                self.scheduler
+                    .createColdObservable([.next(20, lightStateModels)])
+                    .bind(to: self.lightStateModelSubject)
+                    .disposed(by: self.disposeBag)
 
-        scheduler.start()
+                expect(numberOfLightsWithStates)
+                    .events(
+                        scheduler: self.scheduler,
+                        disposeBag: self.disposeBag)
+                    .to(equal([.next(20, 3)]))
+            }
 
-        XCTAssertEqual(result.events, [.next(20, 3)])
-    }
+            it("will have expected result if states arrive before models") {
+                self.lightsRepository.queryAllLightsReturnValue = self.lightModelSubject
+                self.lightsRepository.queryAllLightStatesReturnValue = self.lightStateModelSubject
 
-    // queryLightsWithState should return same result regardless of order of model and state events
-    func testQueryLightsWithState_When_Model_After_State() throws {
-        lightsRepository.queryAllLightsReturnValue = lightModelSubject
-        lightsRepository.queryAllLightStatesReturnValue = lightStateModelSubject
+                let lightModels = [LightModel].stub(withCount: 3)
+                let lightStateModels = [LightStateModel].stub(withCount: 3)
 
-        let lightModel = LightModel.stub(withId: 1)
-        let lightStateModel = LightStateModel.stub(withId: 1)
+                let numberOfLightsWithStates = self.lightsUseCase
+                    .queryLightsWithState()
+                    .map { $0.count }
 
-        let numberOfLightsWithStates = self.lightsUseCase
-            .queryLightsWithState()
-            .map { $0.count }
+                self.scheduler
+                    .createColdObservable([.next(10, lightStateModels)])
+                    .bind(to: self.lightStateModelSubject)
+                    .disposed(by: self.disposeBag)
 
-        scheduler
-            .createColdObservable([.next(10, [lightStateModel])])
-            .bind(to: lightStateModelSubject)
-            .disposed(by: disposeBag)
+                self.scheduler
+                    .createColdObservable([.next(20, lightModels)])
+                    .bind(to: self.lightModelSubject)
+                    .disposed(by: self.disposeBag)
 
-        scheduler
-            .createColdObservable([.next(20, [lightModel])])
-            .bind(to: lightModelSubject)
-            .disposed(by: disposeBag)
+                expect(numberOfLightsWithStates)
+                    .events(
+                        scheduler: self.scheduler,
+                        disposeBag: self.disposeBag)
+                    .to(equal([.next(20, 3)]))
+            }
 
-        let result = scheduler.record(numberOfLightsWithStates, disposeBag: self.disposeBag)
+        }
 
-        scheduler.start()
-
-        XCTAssertEqual(result.events, [.next(20, 1)])
     }
 
 }

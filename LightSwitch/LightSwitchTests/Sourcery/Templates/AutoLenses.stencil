@@ -1,0 +1,121 @@
+@testable import LightSwitch
+
+// swiftlint:disable variable_name
+
+struct Lens<Whole, Part> {
+
+    let get: (Whole) -> Part
+    let set: (Part, Whole) -> Whole
+
+    var affine: Affine<Whole, Part> {
+        return Affine<Whole, Part>(
+            tryGet: self.get,
+            trySet: self.set
+        )
+    }
+
+    /**
+    Compose operator for lenses that allows us to make changes to nested structs.
+
+    - Returns: Composition of two lenses
+
+    Example usage:
+    ```
+    struct House {
+        let location: Location
+        ...
+    }
+
+    struct Location {
+        let address: Address
+        ...
+    }
+
+    struct Address {
+        let streetName: String
+        ...
+    }
+
+    let someAddress = Address(streetName: "Broadway", ...)
+    let someLocation = Location(address: someAddress, ...)
+    let someHouse = House(location: someLocation, ...)
+
+    let houseLocationStreetLens = (House.locationLens * Location.addressLens * Address.streetNameLens)
+    houseLocationStreetLens.set("Hollywood Bld", someHouse)
+    ```
+    */
+    static func * <Subpart>(lhs: Lens<Whole, Part>, rhs: Lens<Part, Subpart>) -> Lens<Whole, Subpart> {
+        return Lens<Whole, Subpart>(
+            get: { whole in rhs.get(lhs.get(whole)) },
+            set: { subpart, whole in lhs.set(rhs.set(subpart, lhs.get(whole)), whole) }
+        )
+    }
+
+    static func * <Subpart>(lhs: Lens<Whole, Part>, rhs: Affine<Part, Subpart>) -> Affine<Whole, Subpart> {
+        return lhs.affine * rhs
+    }
+
+    static func * <Subpart>(lhs: Affine<Whole, Part>, rhs: Lens<Part, Subpart>) -> Affine<Whole, Subpart> {
+        return lhs * rhs.affine
+    }
+
+    static func * <Subpart>(lhs: Lens<Whole, Part?>, rhs: Lens<Part, Subpart>) -> Affine<Whole, Subpart> {
+        return lhs.affine * Part?.prism.affine * rhs.affine
+    }
+
+}
+
+struct Prism<Whole, Part> {
+
+    let tryGet: (Whole) -> Part?
+    let set: (Part) -> Whole
+
+    var affine: Affine<Whole, Part> {
+        return Affine<Whole, Part>(
+            tryGet: self.tryGet,
+            trySet: { part, _ in self.set(part) }
+        )
+    }
+
+}
+
+struct Affine<Whole, Part> {
+
+    let tryGet: (Whole) -> Part?
+    let trySet: (Part, Whole) -> Whole?
+
+    static func * <Subpart>(lhs: Affine<Whole, Part>, rhs: Affine<Part, Subpart>) -> Affine<Whole, Subpart> {
+        return Affine<Whole, Subpart>(
+            tryGet: { whole in lhs.tryGet(whole).flatMap(rhs.tryGet) },
+            trySet: { (subpart, whole) in lhs.tryGet(whole).flatMap { rhs.trySet(subpart, $0) }.flatMap { lhs.trySet($0, whole) } }
+        )
+    }
+
+}
+
+extension Optional {
+
+    static var prism: Prism<Optional,Wrapped> {
+        return Prism<Optional,Wrapped>.init(
+            tryGet: { $0 },
+            set: Optional.some)
+    }
+
+}
+
+{% for type in types.types|struct where type|annotated:"AutoLenses" %}
+extension {{ type.name }} {
+{% for variable in type.storedVariables %}
+  static let {{ variable.name }}Lens = Lens<{{type.name}}, {{variable.typeName}}>(
+    get: { $0.{{variable.name}} },
+    set: { {{variable.name}}, {{type.name|lowerFirstLetter}} in
+       {{type.name}}(
+       {% for argument in type.storedVariables %}
+            {{argument.name}}: {% if variable.name == argument.name %}{{variable.name}}{% else %} {{type.name|lowerFirstLetter}}.{{argument.name}}{% endif %}{{ ', ' if not forloop.last }}
+       {% endfor %})
+    }
+  ){% endfor %}
+}
+
+{% endfor %}
+

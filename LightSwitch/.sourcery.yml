@@ -1,0 +1,10 @@
+project:
+  - file: LightSwitch.xcodeproj
+    target:
+      name: LightSwitch
+  - file: LightSwitch.xcodeproj
+    target:
+      name: LightSwitchTests
+templates:
+    - LightSwitchTests/Sourcery/Templates
+output: LightSwitchTests/Sourcery/Generated

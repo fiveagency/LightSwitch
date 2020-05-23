@@ -16,4 +16,7 @@ target 'LightSwitchTests' do
   shared_pods
   pod 'RxBlocking'
   pod 'RxTest'
+  pod 'Sourcery'
+  pod 'Quick'
+  pod 'RxNimble', subspecs: ['RxBlocking', 'RxTest']
 end
