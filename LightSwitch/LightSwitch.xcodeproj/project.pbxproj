@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19B024F0ABE8A7BB2B228A9B /* Pods_LightSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920BEE74D07D12B3A50FE00E /* Pods_LightSwitch.framework */; };
+		770DB8F608B56E1E4676B850 /* Pods_LightSwitchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0A106DC43AA41D5DBDCEAC /* Pods_LightSwitchTests.framework */; };
 		B45265B72460B6CE00E2258C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265B62460B6CE00E2258C /* AppDelegate.swift */; };
 		B45265B92460B6CE00E2258C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265B82460B6CE00E2258C /* SceneDelegate.swift */; };
 		B45265BE2460B6CE00E2258C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45265BC2460B6CE00E2258C /* Main.storyboard */; };
@@ -31,9 +32,27 @@
 		B45266002460C6A700E2258C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45265FF2460C6A700E2258C /* MainViewController.swift */; };
 		B45266022460C6D500E2258C /* MainViewController+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45266012460C6D500E2258C /* MainViewController+Design.swift */; };
 		B45266042460C6E900E2258C /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45266032460C6E900E2258C /* MainViewPresenter.swift */; };
+		B48DE8B42479B33100666DCB /* LightSwitchUseCaseStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8B32479B33100666DCB /* LightSwitchUseCaseStateTests.swift */; };
+		B48DE8BD2479B7E200666DCB /* LightsRepositoryProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8BC2479B7E200666DCB /* LightsRepositoryProtocolMock.swift */; };
+		B48DE8BF2479B81C00666DCB /* LightsUseCaseTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8BE2479B81C00666DCB /* LightsUseCaseTestData.swift */; };
+		B48DE8C32479B8BE00666DCB /* StubProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8C22479B8BE00666DCB /* StubProtocol.swift */; };
+		B48DE8C52479B8CC00666DCB /* Array+StubProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8C42479B8CC00666DCB /* Array+StubProtocol.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B48DE8B62479B33100666DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B45265AB2460B6CE00E2258C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B45265B22460B6CE00E2258C;
+			remoteInfo = LightSwitch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		5A2267F40C590FA92B03A8C8 /* Pods-LightSwitchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitchTests.release.xcconfig"; path = "Target Support Files/Pods-LightSwitchTests/Pods-LightSwitchTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D0A106DC43AA41D5DBDCEAC /* Pods_LightSwitchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightSwitchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		736215994429952F99FDB803 /* Pods-LightSwitchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitchTests.debug.xcconfig"; path = "Target Support Files/Pods-LightSwitchTests/Pods-LightSwitchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		920BEE74D07D12B3A50FE00E /* Pods_LightSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45265B32460B6CE00E2258C /* LightSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45265B62460B6CE00E2258C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +79,13 @@
 		B45265FF2460C6A700E2258C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B45266012460C6D500E2258C /* MainViewController+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Design.swift"; sourceTree = "<group>"; };
 		B45266032460C6E900E2258C /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		B48DE8B12479B33100666DCB /* LightSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B48DE8B32479B33100666DCB /* LightSwitchUseCaseStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSwitchUseCaseStateTests.swift; sourceTree = "<group>"; };
+		B48DE8B52479B33100666DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B48DE8BC2479B7E200666DCB /* LightsRepositoryProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsRepositoryProtocolMock.swift; sourceTree = "<group>"; };
+		B48DE8BE2479B81C00666DCB /* LightsUseCaseTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsUseCaseTestData.swift; sourceTree = "<group>"; };
+		B48DE8C22479B8BE00666DCB /* StubProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubProtocol.swift; sourceTree = "<group>"; };
+		B48DE8C42479B8CC00666DCB /* Array+StubProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+StubProtocol.swift"; sourceTree = "<group>"; };
 		D88E1F4A9C980F0C61835130 /* Pods-LightSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitch.release.xcconfig"; path = "Target Support Files/Pods-LightSwitch/Pods-LightSwitch.release.xcconfig"; sourceTree = "<group>"; };
 		E0CBF5C1D8FF36264619CE02 /* Pods-LightSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitch.debug.xcconfig"; path = "Target Support Files/Pods-LightSwitch/Pods-LightSwitch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +99,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B48DE8AE2479B33100666DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770DB8F608B56E1E4676B850 /* Pods_LightSwitchTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +115,8 @@
 			children = (
 				E0CBF5C1D8FF36264619CE02 /* Pods-LightSwitch.debug.xcconfig */,
 				D88E1F4A9C980F0C61835130 /* Pods-LightSwitch.release.xcconfig */,
+				736215994429952F99FDB803 /* Pods-LightSwitchTests.debug.xcconfig */,
+				5A2267F40C590FA92B03A8C8 /* Pods-LightSwitchTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -89,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				920BEE74D07D12B3A50FE00E /* Pods_LightSwitch.framework */,
+				5D0A106DC43AA41D5DBDCEAC /* Pods_LightSwitchTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B45265B52460B6CE00E2258C /* LightSwitch */,
+				B48DE8B22479B33100666DCB /* LightSwitchTests */,
 				B45265B42460B6CE00E2258C /* Products */,
 				3542E0343085F29A92E84160 /* Pods */,
 				A8FB164611F52FDD7AF90963 /* Frameworks */,
@@ -107,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B45265B32460B6CE00E2258C /* LightSwitch.app */,
+				B48DE8B12479B33100666DCB /* LightSwitchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,6 +253,35 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B48DE8B22479B33100666DCB /* LightSwitchTests */ = {
+			isa = PBXGroup;
+			children = (
+				B48DE8C12479B8AA00666DCB /* Helpers */,
+				B48DE8C02479B89300666DCB /* Lights */,
+				B48DE8B52479B33100666DCB /* Info.plist */,
+			);
+			path = LightSwitchTests;
+			sourceTree = "<group>";
+		};
+		B48DE8C02479B89300666DCB /* Lights */ = {
+			isa = PBXGroup;
+			children = (
+				B48DE8B32479B33100666DCB /* LightSwitchUseCaseStateTests.swift */,
+				B48DE8BC2479B7E200666DCB /* LightsRepositoryProtocolMock.swift */,
+				B48DE8BE2479B81C00666DCB /* LightsUseCaseTestData.swift */,
+			);
+			path = Lights;
+			sourceTree = "<group>";
+		};
+		B48DE8C12479B8AA00666DCB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B48DE8C22479B8BE00666DCB /* StubProtocol.swift */,
+				B48DE8C42479B8CC00666DCB /* Array+StubProtocol.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,18 +304,42 @@
 			productReference = B45265B32460B6CE00E2258C /* LightSwitch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B48DE8B02479B33100666DCB /* LightSwitchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B48DE8BA2479B33100666DCB /* Build configuration list for PBXNativeTarget "LightSwitchTests" */;
+			buildPhases = (
+				50CFD22E1376238349609D2B /* [CP] Check Pods Manifest.lock */,
+				B48DE8AD2479B33100666DCB /* Sources */,
+				B48DE8AE2479B33100666DCB /* Frameworks */,
+				B48DE8AF2479B33100666DCB /* Resources */,
+				CC4DF504ED74C077FB33178B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B48DE8B72479B33100666DCB /* PBXTargetDependency */,
+			);
+			name = LightSwitchTests;
+			productName = LightSwitchTests;
+			productReference = B48DE8B12479B33100666DCB /* LightSwitchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B45265AB2460B6CE00E2258C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Kristijan Vidovic";
 				TargetAttributes = {
 					B45265B22460B6CE00E2258C = {
 						CreatedOnToolsVersion = 11.4.1;
+					};
+					B48DE8B02479B33100666DCB = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = B45265B22460B6CE00E2258C;
 					};
 				};
 			};
@@ -265,6 +357,7 @@
 			projectRoot = "";
 			targets = (
 				B45265B22460B6CE00E2258C /* LightSwitch */,
+				B48DE8B02479B33100666DCB /* LightSwitchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +370,13 @@
 				B45265C32460B6D200E2258C /* LaunchScreen.storyboard in Resources */,
 				B45265C02460B6D200E2258C /* Assets.xcassets in Resources */,
 				B45265BE2460B6CE00E2258C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B48DE8AF2479B33100666DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +400,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LightSwitch/Pods-LightSwitch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		50CFD22E1376238349609D2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LightSwitchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		61571DAC47D9DB70269B6162 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,6 +442,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC4DF504ED74C077FB33178B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightSwitchTests/Pods-LightSwitchTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightSwitchTests/Pods-LightSwitchTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LightSwitchTests/Pods-LightSwitchTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -352,7 +491,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B48DE8AD2479B33100666DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B48DE8BD2479B7E200666DCB /* LightsRepositoryProtocolMock.swift in Sources */,
+				B48DE8C52479B8CC00666DCB /* Array+StubProtocol.swift in Sources */,
+				B48DE8C32479B8BE00666DCB /* StubProtocol.swift in Sources */,
+				B48DE8BF2479B81C00666DCB /* LightsUseCaseTestData.swift in Sources */,
+				B48DE8B42479B33100666DCB /* LightSwitchUseCaseStateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B48DE8B72479B33100666DCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B45265B22460B6CE00E2258C /* LightSwitch */;
+			targetProxy = B48DE8B62479B33100666DCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B45265BC2460B6CE00E2258C /* Main.storyboard */ = {
@@ -526,6 +685,50 @@
 			};
 			name = Release;
 		};
+		B48DE8B82479B33100666DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 736215994429952F99FDB803 /* Pods-LightSwitchTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45L73FL7MX;
+				INFOPLIST_FILE = LightSwitchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kvidovic.LightSwitchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LightSwitch.app/LightSwitch";
+			};
+			name = Debug;
+		};
+		B48DE8B92479B33100666DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A2267F40C590FA92B03A8C8 /* Pods-LightSwitchTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45L73FL7MX;
+				INFOPLIST_FILE = LightSwitchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kvidovic.LightSwitchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LightSwitch.app/LightSwitch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -543,6 +746,15 @@
 			buildConfigurations = (
 				B45265C82460B6D200E2258C /* Debug */,
 				B45265C92460B6D200E2258C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B48DE8BA2479B33100666DCB /* Build configuration list for PBXNativeTarget "LightSwitchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B48DE8B82479B33100666DCB /* Debug */,
+				B48DE8B92479B33100666DCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
