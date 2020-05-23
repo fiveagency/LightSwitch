@@ -15,4 +15,5 @@ end
 target 'LightSwitchTests' do
   shared_pods
   pod 'RxBlocking'
+  pod 'RxTest'
 end

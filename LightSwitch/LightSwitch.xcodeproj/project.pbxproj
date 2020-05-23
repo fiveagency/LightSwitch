@@ -37,6 +37,8 @@
 		B48DE8BF2479B81C00666DCB /* LightsUseCaseTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8BE2479B81C00666DCB /* LightsUseCaseTestData.swift */; };
 		B48DE8C32479B8BE00666DCB /* StubProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8C22479B8BE00666DCB /* StubProtocol.swift */; };
 		B48DE8C52479B8CC00666DCB /* Array+StubProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8C42479B8CC00666DCB /* Array+StubProtocol.swift */; };
+		B48DE8C72479BE8900666DCB /* LightSwitchUseCaseEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8C62479BE8900666DCB /* LightSwitchUseCaseEventTests.swift */; };
+		B48DE8C92479C2FB00666DCB /* TestScheduler+Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DE8C82479C2FB00666DCB /* TestScheduler+Record.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		B48DE8BE2479B81C00666DCB /* LightsUseCaseTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsUseCaseTestData.swift; sourceTree = "<group>"; };
 		B48DE8C22479B8BE00666DCB /* StubProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubProtocol.swift; sourceTree = "<group>"; };
 		B48DE8C42479B8CC00666DCB /* Array+StubProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+StubProtocol.swift"; sourceTree = "<group>"; };
+		B48DE8C62479BE8900666DCB /* LightSwitchUseCaseEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSwitchUseCaseEventTests.swift; sourceTree = "<group>"; };
+		B48DE8C82479C2FB00666DCB /* TestScheduler+Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestScheduler+Record.swift"; sourceTree = "<group>"; };
 		D88E1F4A9C980F0C61835130 /* Pods-LightSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitch.release.xcconfig"; path = "Target Support Files/Pods-LightSwitch/Pods-LightSwitch.release.xcconfig"; sourceTree = "<group>"; };
 		E0CBF5C1D8FF36264619CE02 /* Pods-LightSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightSwitch.debug.xcconfig"; path = "Target Support Files/Pods-LightSwitch/Pods-LightSwitch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				B48DE8B32479B33100666DCB /* LightSwitchUseCaseStateTests.swift */,
+				B48DE8C62479BE8900666DCB /* LightSwitchUseCaseEventTests.swift */,
 				B48DE8BC2479B7E200666DCB /* LightsRepositoryProtocolMock.swift */,
 				B48DE8BE2479B81C00666DCB /* LightsUseCaseTestData.swift */,
 			);
@@ -278,6 +283,7 @@
 			children = (
 				B48DE8C22479B8BE00666DCB /* StubProtocol.swift */,
 				B48DE8C42479B8CC00666DCB /* Array+StubProtocol.swift */,
+				B48DE8C82479C2FB00666DCB /* TestScheduler+Record.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -496,10 +502,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48DE8BD2479B7E200666DCB /* LightsRepositoryProtocolMock.swift in Sources */,
+				B48DE8C92479C2FB00666DCB /* TestScheduler+Record.swift in Sources */,
 				B48DE8C52479B8CC00666DCB /* Array+StubProtocol.swift in Sources */,
 				B48DE8C32479B8BE00666DCB /* StubProtocol.swift in Sources */,
 				B48DE8BF2479B81C00666DCB /* LightsUseCaseTestData.swift in Sources */,
 				B48DE8B42479B33100666DCB /* LightSwitchUseCaseStateTests.swift in Sources */,
+				B48DE8C72479BE8900666DCB /* LightSwitchUseCaseEventTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
